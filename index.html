@@ -52,6 +52,70 @@
         .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
         .hero span { color: var(--primary-color); }
 
+        /* ============================= */
+        /* تصميم قسم المستشار الجديد */
+        /* ============================= */
+        .consultant-section {
+            padding: 40px 20px;
+            background: var(--white);
+            text-align: center;
+        }
+        .consultant-card {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #fdfdfd;
+            border-radius: var(--card-border-radius);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid #eee;
+        }
+        .consultant-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 0 15px rgba(255, 121, 0, 0.4);
+        }
+        .consultant-info h2 {
+            color: var(--secondary-color);
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+        .consultant-info p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        .btn-call {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 25px;
+            background: var(--dark-orange); 
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: background 0.3s;
+            font-size: 1.1rem;
+        }
+        .btn-call:hover {
+            background: #ff7900;
+        }
+        @media (min-width: 768px) {
+            .consultant-card {
+                flex-direction: row-reverse; /* الصورة على اليمين والنص على اليسار في الوضع الأفقي */
+                text-align: right;
+                justify-content: space-around;
+            }
+        }
+        /* ============================= */
+
         /* أزرار التحكم في التخفيضات */
         .pricing-controls {
             display: flex;
@@ -191,7 +255,6 @@
             margin-bottom: 25px;
             color: #555;
             font-weight: bold;
-            font-size: 1rem;
             min-height: 25px;
         }
         
@@ -219,6 +282,17 @@
         </div>
     </div>
 
+    <section class="consultant-section" data-aos="zoom-in">
+        <div class="consultant-card">
+            <img src="WhatsApp Image 2025-11-30 at 7.36.57 PM.jpeg" alt="المستشار التجاري كريم" class="consultant-img">
+            <div class="consultant-info">
+                <h2>تحدث مع مستشارنا التجاري</h2>
+                <p>الاسم: **كريم (Karim)**</p>
+                <p>للاستفسار والحصول على العروض الخاصة والتخفيضات</p>
+                <a href="tel:0660201206" class="btn-call"><i class="fas fa-phone-flip"></i> اتصل الآن: 06 60 20 12 06</a>
+            </div>
+        </div>
+    </section>
     <div class="pricing-controls" data-aos="fade-up">
         <button class="filter-btn active" onclick="setCategory('standard')">
             <i class="fas fa-users"></i> العموم
@@ -249,7 +323,7 @@
                 <div class="current-price"><span id="price-20">249</span> <span class="currency">درهم</span></div>
             </div>
             <ul class="features">
-                <li><i class="fas fa-wifi"></i> جهاز راوتر مجاني</li>
+                <li><i class="fas fa-wifi"></i> <b>جهاز راوتر مجاني</b></li>
                 <li><i class="fas fa-clock"></i> 2 ساعات مكالمات</li>
                 <li><i class="fas fa-phone-alt"></i> لا محدود نحو الثابت</li>
                 <li><i class="fas fa-tools"></i> مصاريف التركيب 99 درهم</li>
@@ -265,7 +339,7 @@
                 <div class="current-price"><span id="price-50">299</span> <span class="currency">درهم</span></div>
             </div>
             <ul class="features">
-                <li><i class="fas fa-wifi"></i> جهاز راوتر مجاني</li>
+                <li><i class="fas fa-wifi"></i> <b>جهاز راوتر مجاني</b></li>
                 <li><i class="fas fa-clock"></i> 3 ساعات مكالمات</li>
                 <li><i class="fas fa-phone-alt"></i> لا محدود نحو الثابت</li>
                 <li><i class="fas fa-check-circle"></i> <b>التركيب مجاني 100%</b></li>
@@ -281,7 +355,7 @@
                 <div class="current-price"><span id="price-100">349</span> <span class="currency">درهم</span></div>
             </div>
             <ul class="features">
-                <li><i class="fas fa-wifi"></i> جهاز راوتر مجاني</li>
+                <li><i class="fas fa-wifi"></i> <b>جهاز راوتر مجاني</b></li>
                 <li><i class="fas fa-clock"></i> 4 ساعات مكالمات</li>
                 <li><i class="fas fa-phone-alt"></i> لا محدود نحو الثابت</li>
                 <li><i class="fas fa-check-circle"></i> <b>التركيب مجاني 100%</b></li>
@@ -297,7 +371,7 @@
                 <div class="current-price"><span id="price-200">449</span> <span class="currency">درهم</span></div>
             </div>
             <ul class="features">
-                <li><i class="fas fa-wifi"></i> جهاز راوتر مجاني</li>
+                <li><i class="fas fa-wifi"></i> <b>جهاز راوتر مجاني</b></li>
                 <li><i class="fas fa-clock"></i> 6 ساعات مكالمات</li>
                 <li><i class="fas fa-phone-alt"></i> لا محدود نحو الثابت</li>
                 <li><i class="fas fa-check-circle"></i> <b>التركيب مجاني 100%</b></li>
@@ -313,7 +387,7 @@
                 <div class="current-price"><span id="price-500">749</span> <span class="currency">درهم</span></div>
             </div>
             <ul class="features">
-                <li><i class="fas fa-wifi"></i> جهاز راوتر عالي السرعة</li>
+                <li><i class="fas fa-wifi"></i> <b>جهاز راوتر عالي السرعة مجاني</b></li>
                 <li><i class="fas fa-clock"></i> <b>10 ساعات مكالمات</b></li>
                 <li><i class="fas fa-phone-alt"></i> لا محدود نحو الثابت</li>
                 <li><i class="fas fa-check-circle"></i> <b>التركيب مجاني 100%</b></li>
@@ -329,7 +403,7 @@
                 <div class="current-price"><span id="price-1000">949</span> <span class="currency">درهم</span></div>
             </div>
             <ul class="features">
-                <li><i class="fas fa-wifi"></i> جهاز راوتر Pro</li>
+                <li><i class="fas fa-wifi"></i> <b>جهاز راوتر Pro مجاني</b></li>
                 <li><i class="fas fa-clock"></i> <b>20 ساعة مكالمات</b></li>
                 <li><i class="fas fa-phone-alt"></i> لا محدود نحو الثابت</li>
                 <li><i class="fas fa-check-circle"></i> <b>التركيب مجاني 100%</b></li>
@@ -353,13 +427,14 @@
 
         // قاعدة البيانات (تم حساب أسعار 500 و 1000 بناءً على النسب المئوية)
         const pricingData = {
-            '20': { standard: 249, employees: 186, veterans: 124 },
-            '50': { standard: 299, employees: 225, veterans: 149 },
-            '100': { standard: 349, employees: 261, veterans: 174 },
-            '200': { standard: 449, employees: 336, veterans: 224 },
-            // الحسابات التقريبية للتخفيضات للعروض العليا
+            '20': { standard: 249, employees: 186, veterans: 124 }, // الأسعار من الصورة
+            '50': { standard: 299, employees: 225, veterans: 149 }, // الأسعار من الصورة
+            '100': { standard: 349, employees: 261, veterans: 174 }, // الأسعار من الصورة
+            '200': { standard: 449, employees: 336, veterans: 224 }, // الأسعار من الصورة
+            // الحسابات التقريبية للتخفيضات للعروض العليا (749*0.75=561.75 / 749*0.5=374.5)
             '500': { standard: 749, employees: 561, veterans: 374 }, 
-            '1000': { standard: 949, employees: 711, veterans: 474 }
+            // الحسابات التقريبية للتخفيضات للعروض العليا (949*0.75=711.75 / 949*0.5=474.5)
+            '1000': { standard: 949, employees: 711, veterans: 474 } 
         };
 
         let currentCategory = 'standard';
